@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.app {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 80px;
+}
+
+@media (max-width: 400px) {
+  .app {
+    margin-left: 24px;
+  }
+}

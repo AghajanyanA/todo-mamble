@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import s from'./app.module.css';
+import Checkbox from './Components/Checkbox/Checkbox';
+import Input from './Components/Input/Input';
+import Todos from './Components/Todos/Todos'
+
 
 function App() {
+  const currentParsedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+  const [todos, setTodos] = useState(currentParsedTodos)
+  const [hideCompleted, setHideCompleted] = useState(false)
+  window.todo = todos
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={s.app}>
+      <Checkbox 
+        todos={todos}
+        hideCompleted={hideCompleted}
+        setHideCompleted={setHideCompleted}
+      />
+      <Input
+        setTodos={setTodos}
+        todos={todos}
+        currentParsedTodos={currentParsedTodos}
+      />
+      <Todos 
+        todos={todos}
+        hideCompleted={hideCompleted}
+        setTodos={setTodos}
+        currentParsedTodos={currentParsedTodos}
+      />
     </div>
   );
 }
