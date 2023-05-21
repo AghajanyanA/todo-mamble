@@ -9,7 +9,6 @@ function App() {
   const currentParsedTodos = JSON.parse(localStorage.getItem("todos")) || [];
   const [todos, setTodos] = useState(currentParsedTodos)
   const [hideCompleted, setHideCompleted] = useState(false)
-  window.todo = todos
   
   return (
     <div className={s.app}>
