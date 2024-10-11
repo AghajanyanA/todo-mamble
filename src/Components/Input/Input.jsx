@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v7 as uuidv7 } from 'uuid'
 import s from "./input.module.css";
 
 const Input = ({ setTodos, todos, currentParsedTodos }) => {
@@ -6,9 +7,10 @@ const Input = ({ setTodos, todos, currentParsedTodos }) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     if(inputValue.trim().length !== 0) {
       const newTodo = {
-        id: currentParsedTodos.length,
+        id: uuidv7(),
         todo: inputValue,
         completed: false,
       };

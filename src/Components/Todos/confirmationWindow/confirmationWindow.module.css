@@ -1,0 +1,61 @@
+.hideWindow {
+    display: none;
+}
+.showWindow {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.25);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.confWindow {
+    margin: 0;
+    width: 400px;
+    height: 200px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.confWindow > h5 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #008594;
+    margin-top: 52px;
+}
+
+.answers {
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 52px;
+}
+
+.yes {
+    margin-right: 40px;
+}
+
+.yes:hover {
+    cursor: pointer;
+}
+
+.no:hover {
+    cursor: pointer;
+}

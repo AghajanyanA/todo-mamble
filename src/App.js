@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import s from'./app.module.css';
-import Checkbox from './Components/Checkbox/Checkbox';
+import HideCompleted from './Components/Checkbox/HideCompleted';
 import Input from './Components/Input/Input';
 import Todos from './Components/Todos/Todos'
 
@@ -12,7 +12,7 @@ function App() {
   
   return (
     <div className={s.app}>
-      <Checkbox 
+      <HideCompleted 
         todos={todos}
         hideCompleted={hideCompleted}
         setHideCompleted={setHideCompleted}
